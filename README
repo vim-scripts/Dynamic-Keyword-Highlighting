@@ -1,0 +1,31 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1320
+
+When inspecting text, often highlighting the current search keyword isn't enough. 
+This script allows you to highlight keywords and search patterns in different colors.
+There are a few ways to use this functionality.
+
+1) visual mode keyword selection
+Use visual mode to select text and press <CTRL>h
+The next available color will be used to highlight the keyword.
+<CTRL>h without a visual mode highlight releases the last highlight.
+
+2) search pattern selection
+Perform a regular "/" search, and the press <CTRL>j
+The next available color will be used to highlight matches.
+<CTRL>h without a visual mode highlight releases the last highlight.
+
+3) search pattern backtracking
+The last highlighted word is set as the current search pattern.
+This allows you to backtrack searches easily. For example,
+- search "keyword" 
+/keyword
+- remember search 
+<CTRL>j
+- search "pattern"
+/pattern
+- remember search
+<CTRL>j
+- At this point, repeating search with just "/" will search "pattern".
+   Use <CTRL>h without any visual highlight to backtrack.
+  Repeating search with just "/" will now search "keyword".
+
